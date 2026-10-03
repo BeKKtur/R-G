@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#29191b">
+  <title>Свадьба Амины и Тимура</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Экран открытия приглашения -->
+  <div class="intro" id="intro">
+    <div class="envelope-wrap">
+      <p class="intro-small">С любовью приглашаем вас</p>
+
+      <button class="envelope" id="openInvitation" aria-label="Открыть приглашение">
+        <div class="envelope-letter">
+          <span>Приглашение</span>
+          <strong>A <i>&</i> T</strong>
+        </div>
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <span class="envelope-seal">♥</span>
+      </button>
+
+      <p class="intro-hint">Нажмите, чтобы открыть</p>
+    </div>
+  </div>
+
+  <!-- Декоративные лепестки -->
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <!-- Главная секция -->
+  <main id="invitation">
+    <header class="hero" id="home">
+      <nav class="navigation">
+        <a href="#home" class="nav-brand">A <span>&</span> T</a>
+        <a href="#details" class="nav-link">Детали торжества</a>
+      </nav>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">THE WEDDING INVITATION</p>
+        <p class="script hero-pretitle">Самый важный день</p>
+
+        <h1>Амина <span>&</span><br>Тимур</h1>
+
+        <div class="ornament">✦ ─── ❦ ─── ✦</div>
+
+        <p class="hero-date">20 · ИЮНЯ · 2027</p>
+        <p class="hero-description">
+          Две души, одна история и целая жизнь впереди.
+          <br>Будем счастливы разделить этот день с вами.
+        </p>
+
+        <a href="#story" class="outline-button">НАШЕ ПРИГЛАШЕНИЕ <span>↓</span></a>
+      </div>
+
+      <div class="hero-bottom">СОЗДАНЫ ДРУГ ДЛЯ ДРУГА</div>
+    </header>
+
+    <!-- Приглашение -->
+    <section class="invitation section" id="story">
+      <div class="section-inner reveal">
+        <p class="eyebrow">ДОРОГИЕ РОДНЫЕ И ДРУЗЬЯ</p>
+        <div class="floral-mark">❦</div>
+
+        <h2>Этот день станет<br>особенным благодаря вам</h2>
+
+        <p class="body-copy">
+          С огромной радостью приглашаем вас разделить
+          с нами один из самых прекрасных дней нашей жизни —
+          день, когда две истории станут одной.
+        </p>
+
+        <p class="script signature">С любовью, Амина и Тимур</p>
+      </div>
+    </section>
+
+    <!-- Фотографии -->
+    <section class="memories section" id="memories">
+      <div class="section-heading reveal">
+        <p class="eyebrow">НАША ИСТОРИЯ</p>
+        <h2>Мгновения <span>счастья</span></h2>
+        <p>Маленькие моменты, из которых складывается любовь.</p>
+      </div>
+
+      <div class="photo-grid">
+        <figure class="photo photo-tall reveal">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"
+            alt="Романтичная свадебная фотография"
+            loading="lazy"
+          >
+          <figcaption>01 — Наша история</figcaption>
+        </figure>
+
+        <figure class="photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=85"
+            alt="Свадебные цветы"
+            loading="lazy"
+          >
+          <figcaption>02 — Нежность</figcaption>
+        </figure>
+
+        <figure class="photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
+            alt="Праздничный свадебный день"
+            loading="lazy"
+          >
+          <figcaption>03 — Обещание</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Дата и таймер -->
+    <section class="date-section section" id="details">
+      <div class="date-content reveal">
+        <p class="eyebrow">СОХРАНИТЕ ЭТУ ДАТУ</p>
+        <h2>Начало нашей<br><span>вечной истории</span></h2>
+
+        <div class="calendar-date">
+          <span>ИЮНЬ</span>
+          <strong>20</strong>
+          <span>ВОСКРЕСЕНЬЕ · 2027</span>
+        </div>
+
+        <p class="countdown-title">До нашей свадьбы осталось</p>
+
+        <div class="countdown">
+          <div><strong id="days">000</strong><span>дней</span></div>
+          <div><strong id="hours">00</strong><span>часов</span></div>
+          <div><strong id="minutes">00</strong><span>минут</span></div>
+          <div><strong id="seconds">00</strong><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Место проведения -->
+    <section class="venue section">
+      <div class="venue-image reveal">
+        <img
+          src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85"
+          alt="Романтичный свадебный зал"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="venue-content reveal">
+        <p class="eyebrow">БУДЕМ ЖДАТЬ ВАС</p>
+        <h2>Место, где<br>встретимся <span>навсегда</span></h2>
+
+        <div class="venue-detail">
+          <span class="detail-icon">✧</span>
+          <div>
+            <h3>Место проведения</h3>
+            <p>Банкетный зал «Аристократ»</p>
+            <p>г. Бишкек, ул. Примерная, 25</p>
+          </div>
+        </div>
+
+        <div class="venue-detail">
+          <span class="detail-icon">♡</span>
+          <div>
+            <h3>Начало торжества</h3>
+            <p>Сбор гостей — 16:00</p>
+            <p>Начало праздника — 17:00</p>
+          </div>
+        </div>
+
+        <a
+          class="outline-button dark-button"
+          href="https://2gis.kg/bishkek"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ПОСМОТРЕТЬ НА КАРТЕ ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- Дресс-код -->
+    <section class="dresscode section">
+      <div class="reveal">
+        <p class="eyebrow">МАЛЕНЬКАЯ ПРОСЬБА</p>
+        <h2>Дресс-код</h2>
+        <p class="body-copy">
+          Будем рады, если ваш образ поддержит нежную
+          атмосферу нашего праздника.
+        </p>
+
+        <div class="color-palette">
+          <span style="--swatch:#e7d8c8" title="Кремовый"></span>
+          <span style="--swatch:#b9a69a" title="Бежевый"></span>
+          <span style="--swatch:#a27c80" title="Пыльная роза"></span>
+          <span style="--swatch:#65484d" title="Бордовый"></span>
+          <span style="--swatch:#373032" title="Графитовый"></span>
+        </div>
+
+        <p class="palette-caption">Кремовый · Пудровый · Бордовый</p>
+      </div>
+    </section>
+
+    <!-- Подтверждение -->
+    <section class="rsvp section" id="rsvp">
+      <div class="rsvp-card reveal">
+        <p class="eyebrow">ВАШЕ ПРИСУТСТВИЕ — НАШ ПОДАРОК</p>
+        <h2>Вы будете с нами?</h2>
+        <p class="body-copy">
+          Пожалуйста, подтвердите своё присутствие.
+          Мы с нетерпением ждём встречи!
+        </p>
+
+        <form id="rsvpForm">
+          <label for="guestName">Ваше имя</label>
+          <input
+            id="guestName"
+            name="name"
+            type="text"
+            placeholder="Как к вам обращаться?"
+            required
+          >
+
+          <label for="attendance">Сможете прийти?</label>
+          <select id="attendance" name="attendance" required>
+            <option value="Да, с радостью!">Да, с радостью!</option>
+            <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+          </select>
+
+          <button class="submit-button" type="submit">
+            ПОДТВЕРДИТЬ ПРИСУТСТВИЕ ♡
+          </button>
+        </form>
+
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="script">Амина & Тимур</p>
+      <div class="ornament">✦ ─── ❦ ─── ✦</div>
+      <p>20 ИЮНЯ 2027 · С ЛЮБОВЬЮ</p>
+      <a href="#home" class="top-link">↑ НАВЕРХ</a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
