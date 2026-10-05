@@ -48,7 +48,6 @@ img {
   width: 100%;
 }
 
-
 /* =========================================
    КОНВЕРТ
 ========================================= */
@@ -61,13 +60,12 @@ img {
   display: grid;
   place-items: center;
 
-  background:
-    radial-gradient(
-      ellipse at 50% 45%,
-      #503034 0%,
-      #29191b 55%,
-      #180f11 100%
-    );
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    #503034 0%,
+    #29191b 55%,
+    #180f11 100%
+  );
 
   transition:
     opacity 1s ease,
@@ -119,9 +117,7 @@ img {
   cursor: pointer;
   perspective: 900px;
 
-  filter: drop-shadow(
-    0 20px 35px rgba(0,0,0,.27)
-  );
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.27));
 }
 
 .envelope-back {
@@ -184,18 +180,13 @@ img {
 
   background: #bca28a;
 
-  clip-path:
-    polygon(
-      0 0,
-      100% 0,
-      50% 57%
-    );
+  clip-path: polygon(0 0, 100% 0, 50% 57%);
 
   transform-origin: top center;
 
   transition:
-    transform .8s ease,
-    opacity .5s ease;
+    transform 0.8s ease,
+    opacity 0.5s ease;
 }
 
 .envelope-front {
@@ -206,14 +197,7 @@ img {
 
   background: #d7c1aa;
 
-  clip-path:
-    polygon(
-      0 0,
-      50% 58%,
-      100% 0,
-      100% 100%,
-      0 100%
-    );
+  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
 }
 
 .envelope-seal {
@@ -224,8 +208,7 @@ img {
   top: 48%;
   left: 50%;
 
-  transform:
-    translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
   display: grid;
   place-items: center;
@@ -245,8 +228,8 @@ img {
   font-size: 14px;
 
   transition:
-    opacity .3s,
-    transform .3s;
+    opacity 0.3s,
+    transform 0.3s;
 }
 
 .envelope.open .envelope-flap {
@@ -261,11 +244,8 @@ img {
 .envelope.open .envelope-seal {
   opacity: 0;
 
-  transform:
-    translate(-50%, -50%)
-    scale(.3);
+  transform: translate(-50%, -50%) scale(0.3);
 }
-
 
 /* =========================================
    HERO
@@ -286,20 +266,10 @@ img {
   color: var(--cream);
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(33,20,22,.79),
-      rgba(33,20,22,.38)
-    ),
-    linear-gradient(
-      0deg,
-      rgba(33,20,22,.72),
-      transparent 60%
-    ),
-    url(
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=90"
-    )
-    center 48% / cover no-repeat;
+    linear-gradient(90deg, rgba(33, 20, 22, 0.79), rgba(33, 20, 22, 0.38)),
+    linear-gradient(0deg, rgba(33, 20, 22, 0.72), transparent 60%),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=90")
+      center 48% / cover no-repeat;
 }
 
 .navigation {
@@ -316,8 +286,7 @@ img {
 
   padding: 28px 8%;
 
-  border-bottom:
-    1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .nav-brand {
@@ -369,12 +338,11 @@ img {
   margin-top: 20px;
 
   font-family: var(--serif);
-  font-size:
-    clamp(65px, 10vw, 120px);
+  font-size: clamp(65px, 10vw, 120px);
 
   font-weight: 400;
 
-  line-height: .83;
+  line-height: 0.83;
 
   letter-spacing: -2px;
 }
@@ -384,7 +352,7 @@ img {
 
   font-family: var(--script);
 
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .ornament {
@@ -423,22 +391,20 @@ img {
 
   padding: 16px 24px;
 
-  border:
-    1px solid rgba(201,168,121,.7);
+  border: 1px solid rgba(201, 168, 121, 0.7);
 
   color: var(--cream);
 
-  background:
-    rgba(255,255,255,.03);
+  background: rgba(255, 255, 255, 0.03);
 
   font-size: 9px;
 
   letter-spacing: 2px;
 
   transition:
-    background .35s,
-    color .35s,
-    transform .35s;
+    background 0.35s,
+    color 0.35s,
+    transform 0.35s;
 }
 
 .outline-button:hover {
@@ -448,7 +414,6 @@ img {
 
   transform: translateY(-3px);
 }
-
 
 /* =========================================
    ОБЩИЕ
@@ -468,7 +433,6 @@ img {
   font-family: var(--script);
 }
 
-
 /* =========================================
    ПРИГЛАШЕНИЕ
 ========================================= */
@@ -478,12 +442,7 @@ img {
 
   text-align: center;
 
-  background:
-    radial-gradient(
-      ellipse at center,
-      #fffaf1,
-      #f1e6d9
-    );
+  background: radial-gradient(ellipse at center, #fffaf1, #f1e6d9);
 }
 
 .floral-mark {
@@ -493,8 +452,7 @@ img {
 
   font-size: 43px;
 
-  animation:
-    gentleFloat 4s ease-in-out infinite;
+  animation: gentleFloat 4s ease-in-out infinite;
 }
 
 .invitation h2 {
@@ -502,8 +460,7 @@ img {
 
   font-weight: 400;
 
-  font-size:
-    clamp(38px, 5vw, 57px);
+  font-size: clamp(38px, 5vw, 57px);
 
   line-height: 1.05;
 }
@@ -530,7 +487,6 @@ img {
   font-size: 33px;
 }
 
-
 /* =========================================
    ҚЫЗ УЗАТУУ
 ========================================= */
@@ -545,15 +501,10 @@ img {
   background:
     radial-gradient(
       circle at 50% 30%,
-      rgba(255,255,255,.95),
+      rgba(255, 255, 255, 0.95),
       transparent 50%
     ),
-    linear-gradient(
-      135deg,
-      #ede0d1,
-      #faf5ed 50%,
-      #eadccd
-    );
+    linear-gradient(135deg, #ede0d1, #faf5ed 50%, #eadccd);
 }
 
 .kyz-card {
@@ -561,8 +512,7 @@ img {
 
   z-index: 2;
 
-  width:
-    min(760px, 100%);
+  width: min(760px, 100%);
 
   margin: auto;
 
@@ -572,16 +522,11 @@ img {
 
   text-align: center;
 
-  background:
-    rgba(255,252,247,.94);
+  background: rgba(255, 252, 247, 0.94);
 
-  border:
-    1px solid
-    rgba(201,168,121,.48);
+  border: 1px solid rgba(201, 168, 121, 0.48);
 
-  box-shadow:
-    0 40px 100px
-    rgba(41,25,27,.10);
+  box-shadow: 0 40px 100px rgba(41, 25, 27, 0.1);
 }
 
 .kyz-card::before {
@@ -591,9 +536,7 @@ img {
 
   inset: 14px;
 
-  border:
-    1px solid
-    rgba(201,168,121,.24);
+  border: 1px solid rgba(201, 168, 121, 0.24);
 
   pointer-events: none;
 }
@@ -606,8 +549,7 @@ img {
   right: -15px;
   top: 10px;
 
-  color:
-    rgba(189,142,141,.10);
+  color: rgba(189, 142, 141, 0.1);
 
   font-size: 180px;
 
@@ -651,8 +593,7 @@ img {
 
   font-family: var(--script);
 
-  font-size:
-    clamp(75px, 12vw, 115px);
+  font-size: clamp(75px, 12vw, 115px);
 
   font-weight: 400;
 
@@ -704,7 +645,6 @@ img {
   background: var(--gold);
 }
 
-
 /* Дата */
 
 .kyz-date {
@@ -714,15 +654,13 @@ img {
 
   display: grid;
 
-  grid-template-columns:
-    1fr 125px 1fr;
+  grid-template-columns: 1fr 125px 1fr;
 
   align-items: center;
 
   max-width: 510px;
 
-  margin:
-    0 auto 50px;
+  margin: 0 auto 50px;
 }
 
 .kyz-date-side {
@@ -733,13 +671,9 @@ img {
   justify-content: center;
   align-items: center;
 
-  border-top:
-    1px solid
-    rgba(201,168,121,.65);
+  border-top: 1px solid rgba(201, 168, 121, 0.65);
 
-  border-bottom:
-    1px solid
-    rgba(201,168,121,.65);
+  border-bottom: 1px solid rgba(201, 168, 121, 0.65);
 
   color: var(--wine);
 
@@ -760,13 +694,9 @@ img {
   justify-content: center;
   align-items: center;
 
-  border-left:
-    1px solid
-    rgba(201,168,121,.65);
+  border-left: 1px solid rgba(201, 168, 121, 0.65);
 
-  border-right:
-    1px solid
-    rgba(201,168,121,.65);
+  border-right: 1px solid rgba(201, 168, 121, 0.65);
 }
 
 .kyz-date-center span {
@@ -788,9 +718,8 @@ img {
 
   font-weight: 400;
 
-  line-height: .8;
+  line-height: 0.8;
 }
-
 
 /* Место */
 
@@ -856,8 +785,7 @@ img {
 
   padding: 15px 25px;
 
-  border:
-    1px solid var(--wine);
+  border: 1px solid var(--wine);
 
   color: var(--wine);
 
@@ -865,7 +793,7 @@ img {
 
   letter-spacing: 2px;
 
-  transition: .35s ease;
+  transition: 0.35s ease;
 }
 
 .map-button:hover {
@@ -904,7 +832,6 @@ img {
   letter-spacing: 1px;
 }
 
-
 /* =========================================
    ДАТА И ТАЙМЕР
 ========================================= */
@@ -915,14 +842,9 @@ img {
   color: var(--cream);
 
   background:
-    linear-gradient(
-      rgba(40,24,27,.93),
-      rgba(40,24,27,.96)
-    ),
-    url(
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85"
-    )
-    center / cover;
+    linear-gradient(rgba(40, 24, 27, 0.93), rgba(40, 24, 27, 0.96)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85")
+      center / cover;
 }
 
 .date-section h2 {
@@ -930,8 +852,7 @@ img {
 
   font-family: var(--serif);
 
-  font-size:
-    clamp(38px, 5vw, 57px);
+  font-size: clamp(38px, 5vw, 57px);
 
   font-weight: 400;
 }
@@ -951,11 +872,9 @@ img {
 
   padding: 20px 10px;
 
-  border-top:
-    1px solid var(--gold);
+  border-top: 1px solid var(--gold);
 
-  border-bottom:
-    1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
 }
 
 .calendar-date span {
@@ -973,14 +892,13 @@ img {
 
   font-size: 85px;
 
-  line-height: .9;
+  line-height: 0.9;
 
   font-weight: 400;
 }
 
 .countdown-title {
-  margin:
-    25px 0 20px;
+  margin: 25px 0 20px;
 
   color: #e5d5cb;
 
@@ -1004,12 +922,9 @@ img {
 
   padding: 17px 10px;
 
-  border:
-    1px solid
-    rgba(201,168,121,.38);
+  border: 1px solid rgba(201, 168, 121, 0.38);
 
-  background:
-    rgba(255,255,255,.02);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .countdown strong,
@@ -1035,7 +950,6 @@ img {
   font-size: 9px;
 }
 
-
 /* =========================================
    ЛОКАЦИЯ
 ========================================= */
@@ -1043,8 +957,7 @@ img {
 .venue {
   display: grid;
 
-  grid-template-columns:
-    1fr .9fr;
+  grid-template-columns: 1fr 0.9fr;
 
   gap: 8%;
 
@@ -1065,8 +978,7 @@ img {
 
   object-fit: cover;
 
-  transition:
-    transform 1s ease;
+  transition: transform 1s ease;
 }
 
 .venue-image:hover img {
@@ -1078,8 +990,7 @@ img {
 
   font-family: var(--serif);
 
-  font-size:
-    clamp(36px, 4.5vw, 53px);
+  font-size: clamp(36px, 4.5vw, 53px);
 
   font-weight: 400;
 }
@@ -1130,7 +1041,6 @@ img {
   color: var(--wine);
 }
 
-
 /* =========================================
    FOOTER
 ========================================= */
@@ -1175,7 +1085,6 @@ img {
   letter-spacing: 2px;
 }
 
-
 /* =========================================
    АНИМАЦИЯ СКРОЛЛА
 ========================================= */
@@ -1183,21 +1092,18 @@ img {
 .reveal {
   opacity: 0;
 
-  transform:
-    translateY(28px);
+  transform: translateY(28px);
 
   transition:
-    opacity .9s ease,
-    transform .9s ease;
+    opacity 0.9s ease,
+    transform 0.9s ease;
 }
 
 .reveal.visible {
   opacity: 1;
 
-  transform:
-    translateY(0);
+  transform: translateY(0);
 }
-
 
 /* =========================================
    ЛЕПЕСТКИ
@@ -1214,38 +1120,24 @@ img {
 
   width: var(--size);
 
-  height:
-    calc(var(--size) * .7);
+  height: calc(var(--size) * 0.7);
 
-  border-radius:
-    100% 0 100% 0;
+  border-radius: 100% 0 100% 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      #f2d1c2,
-      #b8797b
-    );
+  background: linear-gradient(135deg, #f2d1c2, #b8797b);
 
   opacity: 0;
 
   pointer-events: none;
 
-  animation:
-    petalFall
-    var(--duration)
-    linear
-    var(--delay)
-    infinite;
+  animation: petalFall var(--duration) linear var(--delay) infinite;
 }
-
 
 /* =========================================
    KEYFRAMES
 ========================================= */
 
 @keyframes gentleFloat {
-
   0%,
   100% {
     transform: translateY(0);
@@ -1257,10 +1149,9 @@ img {
 }
 
 @keyframes hintPulse {
-
   0%,
   100% {
-    opacity: .55;
+    opacity: 0.55;
   }
 
   50% {
@@ -1269,50 +1160,38 @@ img {
 }
 
 @keyframes petalFall {
-
   0% {
-    transform:
-      translate(0, -5vh)
-      rotate(0deg);
+    transform: translate(0, -5vh) rotate(0deg);
 
     opacity: 0;
   }
 
   10% {
-    opacity: .7;
+    opacity: 0.7;
   }
 
   90% {
-    opacity: .45;
+    opacity: 0.45;
   }
 
   100% {
-    transform:
-      translate(
-        var(--drift),
-        110vh
-      )
-      rotate(600deg);
+    transform: translate(var(--drift), 110vh) rotate(600deg);
 
     opacity: 0;
   }
 }
-
 
 /* =========================================
    ПЛАНШЕТ / ТЕЛЕФОН
 ========================================= */
 
 @media (max-width: 760px) {
-
   .section {
-    padding:
-      80px 7%;
+    padding: 80px 7%;
   }
 
   .navigation {
-    padding:
-      22px 6%;
+    padding: 22px 6%;
   }
 
   .nav-link {
@@ -1322,34 +1201,25 @@ img {
   }
 
   .hero {
-    background-position:
-      56% center;
+    background-position: 56% center;
   }
 
   .hero h1 {
-    font-size:
-      clamp(
-        60px,
-        16vw,
-        90px
-      );
+    font-size: clamp(60px, 16vw, 90px);
   }
 
   .hero-description br {
     display: none;
   }
 
-
   /* Қыз узатуу */
 
   .kyz-section {
-    padding:
-      75px 14px;
+    padding: 75px 14px;
   }
 
   .kyz-card {
-    padding:
-      65px 25px;
+    padding: 65px 25px;
   }
 
   .kyz-card::before {
@@ -1359,7 +1229,7 @@ img {
   .kyz-card::after {
     font-size: 110px;
 
-    opacity: .6;
+    opacity: 0.6;
   }
 
   .kyz-label {
@@ -1369,12 +1239,7 @@ img {
   }
 
   .kyz-name {
-    font-size:
-      clamp(
-        68px,
-        24vw,
-        95px
-      );
+    font-size: clamp(68px, 24vw, 95px);
   }
 
   .kyz-heading {
@@ -1388,8 +1253,7 @@ img {
   }
 
   .kyz-date {
-    grid-template-columns:
-      1fr 95px 1fr;
+    grid-template-columns: 1fr 95px 1fr;
 
     margin-bottom: 45px;
   }
@@ -1414,7 +1278,6 @@ img {
     font-size: 27px;
   }
 
-
   /* Локация */
 
   .venue {
@@ -1428,13 +1291,11 @@ img {
   }
 }
 
-
 /* =========================================
    МАЛЕНЬКИЕ ТЕЛЕФОНЫ
 ========================================= */
 
 @media (max-width: 420px) {
-
   .hero h1 {
     font-size: 62px;
   }
@@ -1454,8 +1315,7 @@ img {
   .countdown > div {
     min-width: 67px;
 
-    padding:
-      13px 7px;
+    padding: 13px 7px;
   }
 
   .countdown strong {
@@ -1463,8 +1323,7 @@ img {
   }
 
   .kyz-date {
-    grid-template-columns:
-      1fr 85px 1fr;
+    grid-template-columns: 1fr 85px 1fr;
   }
 
   .kyz-date-side {
@@ -1482,27 +1341,21 @@ img {
   }
 }
 
-
 /* =========================================
    REDUCED MOTION
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
-    animation-duration:
-      .01ms !important;
+    animation-duration: 0.01ms !important;
 
-    animation-iteration-count:
-      1 !important;
+    animation-iteration-count: 1 !important;
 
-    transition-duration:
-      .01ms !important;
+    transition-duration: 0.01ms !important;
 
-    scroll-behavior:
-      auto !important;
+    scroll-behavior: auto !important;
   }
 }
 /* =========================================
@@ -1540,8 +1393,7 @@ img {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
 
   opacity: 0;
   visibility: hidden;
@@ -1591,5 +1443,35 @@ img {
     height: 44px;
 
     font-size: 20px;
+  }
+}
+.intro-hadith {
+  max-width: 600px;
+  margin: 0 auto 50px;
+
+  color: #f3dfc9;
+  text-align: center;
+
+  font-family: serif;
+  font-size: 22px;
+  line-height: 1.9;
+
+  direction: rtl;
+}
+
+.envelope {
+  margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+  .intro-hadith {
+    width: 90%;
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .envelope {
+    margin-top: 20px;
   }
 }

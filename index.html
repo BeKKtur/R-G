@@ -1,33 +1,48 @@
 <!doctype html>
 <html lang="ky">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Рахимжон & Гули — Тойго чакыруу" />
+    <meta property="og:description" content="15-октябрь, 2026-жыл 🤍" />
+    <meta property="og:type" content="website" />
 
-  <title>Рахимжон & Гули — Үйлөнүү үлпөтүнө чакыруу</title>
+    <meta
+      property="og:image"
+      content="https://guli-rahimjon.vercel.app/cover.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Рахимжон & Гули — Тойго чакыруу" />
+    <meta name="twitter:description" content="15-октябрь, 2026-жыл 🤍" />
+    <meta
+      name="twitter:image"
+      content="https://guli-rahimjon.vercel.app/cover.jpg"
+    />
+    <title>Рахимжон & Гули — Үйлөнүү үлпөтүнө чакыруу</title>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- ГҮЛ ЖАЛБЫРАКТАРЫ -->
-  <div id="petals"></div>
+  <body>
+    <!-- ГҮЛ ЖАЛБЫРАКТАРЫ -->
+    <div id="petals"></div>
 
-
-  <!-- =========================
+    <!-- =========================
        МУЗЫКА
   ========================== -->
 
-  <!--
+    <!--
     Папкага music.mp3 деген музыка файлын сал.
     Мисалы:
     index.html
@@ -36,470 +51,312 @@
     music.mp3
   -->
 
-  <audio id="weddingMusic" loop preload="auto">
-    <source src="jax.mp3" type="audio/mpeg">
-  </audio>
+    <audio id="weddingMusic" loop preload="auto">
+      <source src="jax.mp3" type="audio/mpeg" />
+    </audio>
 
-  <button
-    class="music-button"
-    id="musicButton"
-    type="button"
-    aria-label="Музыканы күйгүзүү же өчүрүү"
-  >
-    <span id="musicIcon">♫</span>
-  </button>
+    <button
+      class="music-button"
+      id="musicButton"
+      type="button"
+      aria-label="Музыканы күйгүзүү же өчүрүү"
+    >
+      <span id="musicIcon">♫</span>
+    </button>
 
-
-  <!-- =========================
+    <!-- =========================
        КОНВЕРТ
   ========================== -->
 
-  <div class="intro" id="intro">
+    <div class="intro" id="intro">
+      <div class="intro-content">
+        <p class="intro-hadith">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+          لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+        </p>
 
-    <div class="intro-content">
+        <button
+          class="envelope"
+          id="openInvitation"
+          type="button"
+          aria-label="Чакырууну ачуу"
+        >
+          <div class="envelope-back"></div>
 
-      <p class="intro-small">
-        Сиздерди сүйүү менен чакырабыз
-      </p>
+          <div class="envelope-letter">
+            <span>Чакыруу</span>
 
-      <button
-        class="envelope"
-        id="openInvitation"
-        type="button"
-        aria-label="Чакырууну ачуу"
-      >
+            <strong> Р <i>&</i> Г </strong>
+          </div>
 
-        <div class="envelope-back"></div>
+          <div class="envelope-front"></div>
 
-        <div class="envelope-letter">
+          <div class="envelope-flap"></div>
 
-          <span>Чакыруу</span>
+          <div class="envelope-seal">РГ</div>
+        </button>
 
-          <strong>
-            Р <i>&</i> Г
-          </strong>
-
-        </div>
-
-        <div class="envelope-front"></div>
-
-        <div class="envelope-flap"></div>
-
-        <div class="envelope-seal">
-          РГ
-        </div>
-
-      </button>
-
-      <p class="intro-hint">
-        АЧУУ ҮЧҮН БАСЫҢЫЗ
-      </p>
-
+        <p class="intro-hint">АЧУУ ҮЧҮН БАСЫҢЫЗ</p>
+      </div>
     </div>
 
-  </div>
-
-
-  <!-- =========================
+    <!-- =========================
        БАШКЫ БӨЛҮК
   ========================== -->
 
-  <header class="hero" id="home">
+    <header class="hero" id="home">
+      <nav class="navigation">
+        <a href="#home" class="nav-brand"> Р <span>&</span> Г </a>
 
-    <nav class="navigation">
+        <a href="#details" class="nav-link"> ТОЙДУН МААЛЫМАТТАРЫ </a>
+      </nav>
 
-      <a href="#home" class="nav-brand">
-        Р <span>&</span> Г
-      </a>
+      <div class="hero-content">
+        <p class="eyebrow">ТОЙГО ЧАКЫРУУ</p>
 
-      <a href="#details" class="nav-link">
-        ҮЛПӨТТҮН МААЛЫМАТТАРЫ
-      </a>
+        <p class="hero-pretitle">Биздин өзгөчө күнүбүз</p>
 
-    </nav>
+        <h1>
+          Рахимжон
+          <span>&</span>
+          <br />
+          Гули
+        </h1>
 
+        <div class="ornament">✦ ─── ❦ ─── ✦</div>
 
-    <div class="hero-content">
+        <p class="hero-date">15 · ОКТЯБРЬ · 2026</p>
 
-      <p class="eyebrow">
-        ҮЙЛӨНҮҮ ҮЛПӨТҮНӨ ЧАКЫРУУ
-      </p>
+        <p class="hero-description">
+          Жашообуздагы эң бактылуу күндү
+          <br />
+          сиздер менен бирге өткөрүүнү каалайбыз
+        </p>
 
-      <p class="hero-pretitle">
-        Биздин өзгөчө күнүбүз
-      </p>
-
-      <h1>
-        Рахимжон
-        <span>&</span>
-        <br>
-        Гули
-      </h1>
-
-      <div class="ornament">
-        ✦ ─── ❦ ─── ✦
+        <a href="#invitation" class="outline-button">
+          ЧАКЫРУУНУ КӨРҮҮ
+          <span>↓</span>
+        </a>
       </div>
+    </header>
 
-      <p class="hero-date">
-        15 · ОКТЯБРЬ · 2026
-      </p>
-
-      <p class="hero-description">
-        Жашообуздагы эң бактылуу күндү
-        <br>
-        сиздер менен бирге өткөрүүнү каалайбыз
-      </p>
-
-      <a href="#invitation" class="outline-button">
-        ЧАКЫРУУНУ КӨРҮҮ
-        <span>↓</span>
-      </a>
-
-    </div>
-
-  </header>
-
-
-  <!-- =========================
+    <!-- =========================
        ЧАКЫРУУ
   ========================== -->
 
-  <section
-    class="invitation section"
-    id="invitation"
-  >
+    <section class="invitation section" id="invitation">
+      <div class="section-inner reveal">
+        <p class="eyebrow">УРМАТТУУ ТУУГАНДАРЫБЫЗ ЖАНА ДОСТОРУБУЗ</p>
 
-    <div class="section-inner reveal">
+        <div class="floral-mark">❦</div>
 
-      <p class="eyebrow">
-        УРМАТТУУ ТУУГАНДАРЫБЫЗ ЖАНА ДОСТОРУБУЗ
-      </p>
+        <h2>
+          Сиздерди
+          <br />
+          тоюбузга чакырабыз
+        </h2>
 
-      <div class="floral-mark">
-        ❦
+        <p class="body-copy">
+          Урматтуу туугандарыбыз, жакындарыбыз жана досторубуз! Жашообуздагы эң
+          кубанычтуу жана унутулгус күнүбүздө сиздерди кадырлуу коногубуз катары
+          көрүүгө абдан кубанычтабыз.
+        </p>
+
+        <p class="body-copy">
+          Сиздердин катышууңуздар жана ак тилегиңиздер бул күндү биз үчүн дагы
+          да өзгөчө жана унутулгус кылат.
+        </p>
+
+        <p class="signature">С любовью, Рахимжон & Гули</p>
       </div>
+    </section>
 
-      <h2>
-        Сиздерди үйлөнүү
-        <br>
-        үлпөтүбүзгө чакырабыз
-      </h2>
-
-      <p class="body-copy">
-        Урматтуу туугандарыбыз, жакындарыбыз жана досторубуз!
-        Жашообуздагы эң кубанычтуу жана унутулгус күнүбүздө
-        сиздерди кадырлуу коногубуз катары көрүүгө абдан кубанычтабыз.
-      </p>
-
-      <p class="body-copy">
-        Сиздердин катышууңуздар жана ак тилегиңиздер
-        бул күндү биз үчүн дагы да өзгөчө жана унутулгус кылат.
-      </p>
-
-      <p class="signature">
-        С любовью, Рахимжон & Гули
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
+    <!-- =========================
        КЫЗ УЗАТУУ
   ========================== -->
 
-  <section class="kyz-section" id="kyz">
+    <section class="kyz-section" id="kyz">
+      <div class="kyz-card reveal">
+        <p class="kyz-label">КЫЗ УЗАТУУ</p>
 
-    <div class="kyz-card reveal">
+        <div class="kyz-ornament">✦ ─── ❦ ─── ✦</div>
 
-      <p class="kyz-label">
-        КЫЗ УЗАТУУ
-      </p>
+        <h2 class="kyz-name">Гули</h2>
 
-      <div class="kyz-ornament">
-        ✦ ─── ❦ ─── ✦
-      </div>
+        <p class="kyz-heading">Урматтуу коноктор!</p>
 
-      <h2 class="kyz-name">
-        Гули
-      </h2>
-
-      <p class="kyz-heading">
-        Урматтуу коноктор!
-      </p>
-
-      <p class="kyz-text">
-        Сиздерди кызыбыз Гулинин кыз узатуу аземине
-        арналган ак дасторконубуздун кадырлуу коногу
-        болууга чакырабыз.
-      </p>
-
-      <p class="kyz-text kyz-second-text">
-        Биздин кубанычтуу жана унутулгус күнүбүздө
-        сиздерди арабыздан көрүү биз үчүн чоң бакыт.
-      </p>
-
-      <div class="kyz-divider"></div>
-
-
-      <!-- КҮНҮ -->
-
-      <div class="kyz-date">
-
-        <div class="kyz-date-side">
-          ОКТЯБРЬ
-        </div>
-
-        <div class="kyz-date-center">
-
-          <span>
-            ДҮЙШӨМБҮ
-          </span>
-
-          <strong>
-            12
-          </strong>
-
-        </div>
-
-        <div class="kyz-date-side">
-          2026
-        </div>
-
-      </div>
-
-
-      <!-- ДАРЕК -->
-
-      <div class="kyz-place">
-
-        <p class="kyz-place-label">
-          АЗЕМ ӨТҮҮЧҮ ДАРЕК
+        <p class="kyz-text">
+          Сиздерди кызыбыз Гулинин кыз узатуу аземине арналган ак
+          дасторконубуздун кадырлуу коногу болууга чакырабыз.
         </p>
 
-        <h3>
-          Коргончо-2
-        </h3>
-
-        <p>
-          Коргончо-2, 43-үй
+        <p class="kyz-text kyz-second-text">
+          Биздин кубанычтуу жана унутулгус күнүбүздө сиздерди арабыздан көрүү
+          биз үчүн чоң бакыт.
         </p>
+
+        <div class="kyz-divider"></div>
+
+        <!-- КҮНҮ -->
+
+        <div class="kyz-date">
+          <div class="kyz-date-side">ОКТЯБРЬ</div>
+
+          <div class="kyz-date-center">
+            <span> ДҮЙШӨМБҮ </span>
+
+            <strong> 12 </strong>
+          </div>
+
+          <div class="kyz-date-side">2026</div>
+        </div>
+
+        <!-- ДАРЕК -->
+
+        <div class="kyz-place">
+          <p class="kyz-place-label">АЗЕМ ӨТҮҮЧҮ ДАРЕК</p>
+
+          <h3>Коргончо-2</h3>
+
+          <p>Коргончо-2, 43-үй</p>
+
+          <a
+            href="https://2gis.kg/bishkek/geo/70030076790443885/71.579804,41.373863"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-button"
+          >
+            КАРТАДАН КӨРҮҮ
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="kyz-love">
+          <p>С любовью</p>
+
+          <strong> Рахимжон & Гули </strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       ҮЛПӨТ КҮНҮ + ТАЙМЕР
+  ========================== -->
+
+    <section class="date-section section" id="details">
+      <div class="section-inner reveal">
+        <p class="eyebrow">БУЛ КҮНДҮ ЭСТЕ САКТАҢЫЗ</p>
+
+        <h2>Биздин той күнүбүз</h2>
+
+        <div class="calendar-date">
+          <span> ОКТЯБРЬ </span>
+
+          <strong> 15 </strong>
+
+          <span> БЕЙШЕМБИ · 2026 </span>
+        </div>
+
+        <p class="countdown-title">Тоюбузга калды</p>
+
+        <div class="countdown">
+          <div>
+            <strong id="days">00</strong>
+            <span>КҮН</span>
+          </div>
+
+          <div>
+            <strong id="hours">00</strong>
+            <span>СААТ</span>
+          </div>
+
+          <div>
+            <strong id="minutes">00</strong>
+            <span>МҮНӨТ</span>
+          </div>
+
+          <div>
+            <strong id="seconds">00</strong>
+            <span>СЕКУНДА</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+       ҮЛПӨТ ӨТҮҮЧҮ ЖЕР
+  ========================== -->
+
+    <section class="venue section">
+      <div class="venue-image reveal">
+        <img
+          src="https://i4.photo.2gis.com/photo-gallery/d5610f89-b79e-4527-822d-ad94fd3a5415.jpg"
+          alt="Үйлөнүү үлпөтү"
+        />
+      </div>
+
+      <div class="venue-content reveal">
+        <p class="eyebrow">ТОЙ ӨТҮҮЧҮ ДАРЕК</p>
+
+        <h2>
+          Сиздерди
+          <span>күтөбүз</span>
+        </h2>
+
+        <div class="venue-detail">
+          <span class="detail-icon"> ❦ </span>
+
+          <div>
+            <h3>«Мурас» рестораны</h3>
+
+            <p>
+              Жалал-Абад облусу, Ала-Бука
+              <br />
+              Мамирбеков көчөсү, 63
+            </p>
+          </div>
+        </div>
+
+        <div class="venue-detail">
+          <span class="detail-icon"> ◷ </span>
+
+          <div>
+            <h3>15-октябрь, 2026-жыл</h3>
+
+            <p>
+              Конокторду тосуп алуу — 17:30
+              <br />
+              Тойдун башталышы — 18:00
+            </p>
+          </div>
+        </div>
 
         <a
-          href="https://2gis.kg/bishkek/geo/70030076790443885/71.579804,41.373863"
+          href="https://2gis.kg/bishkek/geo/70000001101555735"
           target="_blank"
           rel="noopener noreferrer"
-          class="map-button"
+          class="outline-button dark-button"
         >
           КАРТАДАН КӨРҮҮ
           <span>↗</span>
         </a>
-
       </div>
+    </section>
 
-
-      <div class="kyz-love">
-
-        <p>
-          С любовью
-        </p>
-
-        <strong>
-          Гули & Рахимжон
-        </strong>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       ҮЛПӨТ КҮНҮ + ТАЙМЕР
-  ========================== -->
-
-  <section
-    class="date-section section"
-    id="details"
-  >
-
-    <div class="section-inner reveal">
-
-      <p class="eyebrow">
-        БУЛ КҮНДҮ ЭСТЕ САКТАҢЫЗ
-      </p>
-
-      <h2>
-        Биздин үлпөт күнүбүз
-      </h2>
-
-      <div class="calendar-date">
-
-        <span>
-          ОКТЯБРЬ
-        </span>
-
-        <strong>
-          15
-        </strong>
-
-        <span>
-          БЕЙШЕМБИ · 2026
-        </span>
-
-      </div>
-
-      <p class="countdown-title">
-        Үлпөтүбүзгө калды
-      </p>
-
-
-      <div class="countdown">
-
-        <div>
-          <strong id="days">00</strong>
-          <span>КҮН</span>
-        </div>
-
-        <div>
-          <strong id="hours">00</strong>
-          <span>СААТ</span>
-        </div>
-
-        <div>
-          <strong id="minutes">00</strong>
-          <span>МҮНӨТ</span>
-        </div>
-
-        <div>
-          <strong id="seconds">00</strong>
-          <span>СЕКУНДА</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       ҮЛПӨТ ӨТҮҮЧҮ ЖЕР
-  ========================== -->
-
-  <section class="venue section">
-
-    <div class="venue-image reveal">
-
-      <img
-        src="https://i4.photo.2gis.com/photo-gallery/d5610f89-b79e-4527-822d-ad94fd3a5415.jpg"
-        alt="Үйлөнүү үлпөтү"
-      >
-
-    </div>
-
-
-    <div class="venue-content reveal">
-
-      <p class="eyebrow">
-        ҮЛПӨТ ӨТҮҮЧҮ ДАРЕК
-      </p>
-
-      <h2>
-        Сиздерди
-        <span>күтөбүз</span>
-      </h2>
-
-
-      <div class="venue-detail">
-
-        <span class="detail-icon">
-          ❦
-        </span>
-
-        <div>
-
-          <h3>
-            «Мурас» рестораны
-          </h3>
-
-          <p>
-            Жалал-Абад облусу, Ала-Бука
-            <br>
-            Мамирбеков көчөсү, 63
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <div class="venue-detail">
-
-        <span class="detail-icon">
-          ◷
-        </span>
-
-        <div>
-
-          <h3>
-            15-октябрь, 2026-жыл
-          </h3>
-
-          <p>
-            Конокторду тосуп алуу — 17:30
-            <br>
-            Үлпөттүн башталышы — 18:00
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <a
-        href="https://2gis.kg/bishkek/geo/70000001101555735"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="outline-button dark-button"
-      >
-        КАРТАДАН КӨРҮҮ
-        <span>↗</span>
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
+    <!-- =========================
        FOOTER
   ========================== -->
 
-  <footer class="footer">
+    <footer class="footer">
+      <p class="script">Рахимжон & Гули</p>
 
-    <p class="script">
-      Рахимжон & Гули
-    </p>
+      <div class="ornament">✦ ─── ❦ ─── ✦</div>
 
-    <div class="ornament">
-      ✦ ─── ❦ ─── ✦
-    </div>
+      <p>15 ОКТЯБРЬ 2026 · С ЛЮБОВЬЮ</p>
 
-    <p>
-      15 ОКТЯБРЬ 2026 · СҮЙҮҮ МЕНЕН
-    </p>
+      <a href="#home" class="top-link"> ЖОГОРУГА ↑ </a>
+    </footer>
 
-    <a href="#home" class="top-link">
-      ЖОГОРУГА ↑
-    </a>
-
-  </footer>
-
-
-  <script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
