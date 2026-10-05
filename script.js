@@ -1,5 +1,5 @@
 // ==========================================
-// БЛОКИ СТРАНИЦЫ
+// ОСНОВНЫЕ ЭЛЕМЕНТЫ
 // ==========================================
 
 const body = document.body;
@@ -10,33 +10,108 @@ const envelope = document.getElementById("openInvitation");
 
 const petalsContainer = document.getElementById("petals");
 
-// Блокируем скролл, пока конверт закрыт
-body.classList.add("intro-open");
+// ==========================================
+// МУЗЫКА
+// ==========================================
+
+const weddingMusic = document.getElementById("weddingMusic");
+
+const musicButton = document.getElementById("musicButton");
+
+const musicIcon = document.getElementById("musicIcon");
+
+let musicPlaying = false;
+
+// Громкость музыки
+if (weddingMusic) {
+  weddingMusic.volume = 0.45;
+}
 
 // ==========================================
-// ОТКРЫТИЕ КОНВЕРТА
+// ЗАПУСК МУЗЫКИ
 // ==========================================
+
+async function playMusic() {
+  if (!weddingMusic) return;
+
+  try {
+    await weddingMusic.play();
+
+    musicPlaying = true;
+
+    musicButton?.classList.add("playing");
+
+    if (musicIcon) {
+      musicIcon.textContent = "♫";
+    }
+  } catch (error) {
+    console.log("Браузер не разрешил автоматическое воспроизведение.");
+  }
+}
+
+// ==========================================
+// ОСТАНОВКА МУЗЫКИ
+// ==========================================
+
+function pauseMusic() {
+  if (!weddingMusic) return;
+
+  weddingMusic.pause();
+
+  musicPlaying = false;
+
+  musicButton?.classList.remove("playing");
+
+  if (musicIcon) {
+    musicIcon.textContent = "♪";
+  }
+}
+
+// ==========================================
+// КНОПКА МУЗЫКИ
+// ==========================================
+
+if (musicButton) {
+  musicButton.addEventListener("click", () => {
+    if (musicPlaying) {
+      pauseMusic();
+    } else {
+      playMusic();
+    }
+  });
+}
+
+// ==========================================
+// КОНВЕРТ
+// ==========================================
+
+body.classList.add("intro-open");
 
 if (envelope && intro) {
   envelope.addEventListener("click", () => {
-    // Не даём открыть второй раз
     if (envelope.classList.contains("open")) {
       return;
     }
 
     envelope.classList.add("open");
 
-    // После анимации убираем заставку
+    // Запускаем музыку именно после
+    // нажатия пользователя.
+    playMusic();
+
     setTimeout(() => {
       intro.classList.add("closed");
 
       body.classList.remove("intro-open");
+
+      // Показываем кнопку музыки
+      musicButton?.classList.add("visible");
     }, 1200);
   });
 }
 
 // ==========================================
-// ПРОВЕРКА НА УМЕНЬШЕНИЕ АНИМАЦИЙ
+// REDUCED MOTION
 // ==========================================
 
 const reduceMotion = window.matchMedia(
@@ -53,20 +128,14 @@ if (!reduceMotion && petalsContainer) {
 
     petal.className = "petal";
 
-    // Случайная позиция
     petal.style.setProperty("--left", `${Math.random() * 100}%`);
 
-    // Случайный размер
     petal.style.setProperty("--size", `${7 + Math.random() * 10}px`);
 
-    // Скорость падения
     petal.style.setProperty("--duration", `${9 + Math.random() * 12}s`);
 
-    // Чтобы лепестки сразу были
-    // на разных этапах падения
     petal.style.setProperty("--delay", `${-Math.random() * 20}s`);
 
-    // Движение влево / вправо
     petal.style.setProperty("--drift", `${-100 + Math.random() * 200}px`);
 
     petalsContainer.appendChild(petal);
@@ -74,7 +143,7 @@ if (!reduceMotion && petalsContainer) {
 }
 
 // ==========================================
-// АНИМАЦИЯ ПРИ СКРОЛЛЕ
+// АНИМАЦИИ ПРИ СКРОЛЛЕ
 // ==========================================
 
 const revealElements = document.querySelectorAll(".reveal");
@@ -105,22 +174,12 @@ if ("IntersectionObserver" in window) {
 }
 
 // ==========================================
-// ДАТА СВАДЬБЫ
-//
-// В JavaScript:
-// январь = 0
-// февраль = 1
-// ...
-// октябрь = 9
-//
-// Поэтому 15 октября 2026:
+// ТАЙМЕР ҮЙЛӨНҮҮ ҮЛПӨТҮ
+// 15 ОКТЯБРЬ 2026, 18:00
+// Кыргызстан UTC+6
 // ==========================================
 
-const weddingDate = new Date(2026, 9, 15, 16, 0, 0);
-
-// ==========================================
-// ЭЛЕМЕНТЫ ТАЙМЕРА
-// ==========================================
+const weddingDate = new Date("2026-10-15T18:00:00+06:00");
 
 const daysElement = document.getElementById("days");
 
@@ -130,24 +189,15 @@ const minutesElement = document.getElementById("minutes");
 
 const secondsElement = document.getElementById("seconds");
 
-// ==========================================
-// ФОРМАТ ЧИСЕЛ
-// ==========================================
-
 function formatNumber(number) {
   return String(number).padStart(2, "0");
 }
-
-// ==========================================
-// ОБНОВЛЕНИЕ ТАЙМЕРА
-// ==========================================
 
 function updateCountdown() {
   const now = new Date();
 
   let difference = weddingDate.getTime() - now.getTime();
 
-  // Если свадьба уже наступила
   if (difference <= 0) {
     if (daysElement) {
       daysElement.textContent = "00";
@@ -168,7 +218,6 @@ function updateCountdown() {
     return;
   }
 
-  // День = 24 часа
   const dayMilliseconds = 1000 * 60 * 60 * 24;
 
   const hourMilliseconds = 1000 * 60 * 60;
@@ -189,8 +238,6 @@ function updateCountdown() {
 
   const seconds = Math.floor(difference / 1000);
 
-  // Выводим значения
-
   if (daysElement) {
     daysElement.textContent = formatNumber(days);
   }
@@ -208,8 +255,6 @@ function updateCountdown() {
   }
 }
 
-// Первый запуск сразу
 updateCountdown();
 
-// Потом каждую секунду
 setInterval(updateCountdown, 1000);

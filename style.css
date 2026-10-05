@@ -1505,3 +1505,91 @@ img {
       auto !important;
   }
 }
+/* =========================================
+   МУЗЫКА
+========================================= */
+
+.music-button {
+  position: fixed;
+
+  right: 22px;
+  bottom: 22px;
+
+  z-index: 1000;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(201, 168, 121, 0.75);
+
+  background: rgba(41, 25, 27, 0.9);
+
+  color: var(--gold);
+
+  font-family: var(--serif);
+  font-size: 22px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease,
+    background 0.3s ease;
+}
+
+.music-button.visible {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.music-button:hover {
+  background: var(--gold);
+  color: var(--wine);
+}
+
+.music-button.playing #musicIcon {
+  animation: musicPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 600px) {
+  .music-button {
+    right: 16px;
+    bottom: 16px;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 20px;
+  }
+}

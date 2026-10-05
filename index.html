@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="uz-Cyrl">
+<!doctype html>
+<html lang="ky">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Гули & Рахимжон — Тўй таклифномаси</title>
+  <title>Рахимжон & Гули — Үйлөнүү үлпөтүнө чакыруу</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +19,35 @@
 
 <body>
 
-  <!-- Лепестки -->
+  <!-- ГҮЛ ЖАЛБЫРАКТАРЫ -->
   <div id="petals"></div>
+
+
+  <!-- =========================
+       МУЗЫКА
+  ========================== -->
+
+  <!--
+    Папкага music.mp3 деген музыка файлын сал.
+    Мисалы:
+    index.html
+    style.css
+    script.js
+    music.mp3
+  -->
+
+  <audio id="weddingMusic" loop preload="auto">
+    <source src="jax.mp3" type="audio/mpeg">
+  </audio>
+
+  <button
+    class="music-button"
+    id="musicButton"
+    type="button"
+    aria-label="Музыканы күйгүзүү же өчүрүү"
+  >
+    <span id="musicIcon">♫</span>
+  </button>
 
 
   <!-- =========================
@@ -32,23 +59,24 @@
     <div class="intro-content">
 
       <p class="intro-small">
-        Сизларни меҳр билан таклиф қиламиз
+        Сиздерди сүйүү менен чакырабыз
       </p>
 
       <button
         class="envelope"
         id="openInvitation"
-        aria-label="Таклифномани очиш"
+        type="button"
+        aria-label="Чакырууну ачуу"
       >
 
         <div class="envelope-back"></div>
 
         <div class="envelope-letter">
 
-          <span>Таклифнома</span>
+          <span>Чакыруу</span>
 
           <strong>
-            Г <i>&</i> Р
+            Р <i>&</i> Г
           </strong>
 
         </div>
@@ -58,13 +86,13 @@
         <div class="envelope-flap"></div>
 
         <div class="envelope-seal">
-          ГР
+          РГ
         </div>
 
       </button>
 
       <p class="intro-hint">
-        ОЧИШ УЧУН БОСИНГ
+        АЧУУ ҮЧҮН БАСЫҢЫЗ
       </p>
 
     </div>
@@ -73,7 +101,7 @@
 
 
   <!-- =========================
-       HERO
+       БАШКЫ БӨЛҮК
   ========================== -->
 
   <header class="hero" id="home">
@@ -81,11 +109,11 @@
     <nav class="navigation">
 
       <a href="#home" class="nav-brand">
-        Г <span>&</span> Р
+        Р <span>&</span> Г
       </a>
 
       <a href="#details" class="nav-link">
-        ТЎЙ ТАФСИЛОТЛАРИ
+        ҮЛПӨТТҮН МААЛЫМАТТАРЫ
       </a>
 
     </nav>
@@ -94,18 +122,18 @@
     <div class="hero-content">
 
       <p class="eyebrow">
-        ТЎЙ ТАКЛИФНОМАСИ
+        ҮЙЛӨНҮҮ ҮЛПӨТҮНӨ ЧАКЫРУУ
       </p>
 
       <p class="hero-pretitle">
-        Энг муҳим кунимиз
+        Биздин өзгөчө күнүбүз
       </p>
 
       <h1>
-        Гули
+        Рахимжон
         <span>&</span>
         <br>
-        Рахимжон
+        Гули
       </h1>
 
       <div class="ornament">
@@ -113,17 +141,17 @@
       </div>
 
       <p class="hero-date">
-        15 · ОКТЯБР · 2026
+        15 · ОКТЯБРЬ · 2026
       </p>
 
       <p class="hero-description">
-        Ҳаётимизнинг энг гўзал кунини
+        Жашообуздагы эң бактылуу күндү
         <br>
-        сиз билан бирга нишонлашни истаймиз
+        сиздер менен бирге өткөрүүнү каалайбыз
       </p>
 
       <a href="#invitation" class="outline-button">
-        ТАКЛИФНОМАНИ КЎРИШ
+        ЧАКЫРУУНУ КӨРҮҮ
         <span>↓</span>
       </a>
 
@@ -133,7 +161,7 @@
 
 
   <!-- =========================
-       ОСНОВНОЕ ПРИГЛАШЕНИЕ
+       ЧАКЫРУУ
   ========================== -->
 
   <section
@@ -144,7 +172,7 @@
     <div class="section-inner reveal">
 
       <p class="eyebrow">
-        АЗИЗ ЯҚИНЛАРИМИЗ ВА ДЎСТЛАРИМИЗ
+        УРМАТТУУ ТУУГАНДАРЫБЫЗ ЖАНА ДОСТОРУБУЗ
       </p>
 
       <div class="floral-mark">
@@ -152,25 +180,24 @@
       </div>
 
       <h2>
-        Сизларни тўйимизга
+        Сиздерди үйлөнүү
         <br>
-        таклиф қиламиз
+        үлпөтүбүзгө чакырабыз
       </h2>
 
       <p class="body-copy">
-        Азиз оила аъзоларимиз, яқинларимиз ва дўстларимиз!
-        Ҳаётимизнинг энг қувончли ва унутилмас кунида
-        сизларни азиз меҳмонимиз сифатида кўришдан
-        мамнун бўламиз.
+        Урматтуу туугандарыбыз, жакындарыбыз жана досторубуз!
+        Жашообуздагы эң кубанычтуу жана унутулгус күнүбүздө
+        сиздерди кадырлуу коногубуз катары көрүүгө абдан кубанычтабыз.
       </p>
 
       <p class="body-copy">
-        Сизнинг ташрифингиз ва эзгу тилакларингиз
-        ушбу кунни биз учун янада унутилмас қилади.
+        Сиздердин катышууңуздар жана ак тилегиңиздер
+        бул күндү биз үчүн дагы да өзгөчө жана унутулгус кылат.
       </p>
 
       <p class="signature">
-        С любовью, Гули и Рахимжон
+        С любовью, Рахимжон & Гули
       </p>
 
     </div>
@@ -179,18 +206,15 @@
 
 
   <!-- =========================
-       ҚЫЗ УЗАТУУ
+       КЫЗ УЗАТУУ
   ========================== -->
 
-  <section
-    class="kyz-section"
-    id="kyz"
-  >
+  <section class="kyz-section" id="kyz">
 
     <div class="kyz-card reveal">
 
       <p class="kyz-label">
-        ҚЫЗ УЗАТУУ
+        КЫЗ УЗАТУУ
       </p>
 
       <div class="kyz-ornament">
@@ -202,40 +226,39 @@
       </h2>
 
       <p class="kyz-heading">
-        Ҳурматли меҳмонлар!
+        Урматтуу коноктор!
       </p>
 
       <p class="kyz-text">
-        Сизларни қизимиз Гулининг
-        қиз узатиш маросими муносабати билан
-        ёзиладиган дастурхонимизнинг
-        қадрли меҳмони бўлишга таклиф қиламиз.
+        Сиздерди кызыбыз Гулинин кыз узатуу аземине
+        арналган ак дасторконубуздун кадырлуу коногу
+        болууга чакырабыз.
       </p>
 
       <p class="kyz-text kyz-second-text">
-        Ушбу қувончли ва унутилмас кунимизда
-        сизларни орамизда кўришдан мамнун бўламиз.
+        Биздин кубанычтуу жана унутулгус күнүбүздө
+        сиздерди арабыздан көрүү биз үчүн чоң бакыт.
       </p>
 
       <div class="kyz-divider"></div>
 
 
-      <!-- Дата -->
+      <!-- КҮНҮ -->
 
       <div class="kyz-date">
 
         <div class="kyz-date-side">
-          ОКТЯБР
+          ОКТЯБРЬ
         </div>
 
         <div class="kyz-date-center">
 
           <span>
-            ПАЙШАНБА
+            ДҮЙШӨМБҮ
           </span>
 
           <strong>
-            15
+            12
           </strong>
 
         </div>
@@ -247,51 +270,29 @@
       </div>
 
 
-      <!-- Место -->
+      <!-- ДАРЕК -->
 
       <div class="kyz-place">
 
         <p class="kyz-place-label">
-          МАРОСИМ МАНЗИЛИ
+          АЗЕМ ӨТҮҮЧҮ ДАРЕК
         </p>
 
         <h3>
-          «Мурас» ресторани
+          Коргончо-2
         </h3>
 
         <p>
-          Жалолобод вилояти, Ала-Бука
-          <br>
-          Мамирбеков кўчаси, 63
+          Коргончо-2, 43-үй
         </p>
 
-
-        <div class="kyz-time">
-
-          <span>✦</span>
-
-          <strong>
-            17:30
-          </strong>
-
-          <span>✦</span>
-
-        </div>
-
-
-        <!--
-          ВАЖНО:
-          здесь потом можешь поставить
-          точную ссылку ресторана из 2ГИС
-        -->
-
         <a
-          href="https://2gis.kg/bishkek/geo/70000001101555735"
+          href="https://2gis.kg/bishkek/geo/70030076790443885/71.579804,41.373863"
           target="_blank"
           rel="noopener noreferrer"
           class="map-button"
         >
-          ХАРИТАДА КЎРИШ
+          КАРТАДАН КӨРҮҮ
           <span>↗</span>
         </a>
 
@@ -316,7 +317,7 @@
 
 
   <!-- =========================
-       ДАТА + ТАЙМЕР
+       ҮЛПӨТ КҮНҮ + ТАЙМЕР
   ========================== -->
 
   <section
@@ -327,18 +328,17 @@
     <div class="section-inner reveal">
 
       <p class="eyebrow">
-        БУ САНАНИ ЁДДА САҚЛАНГ
+        БУЛ КҮНДҮ ЭСТЕ САКТАҢЫЗ
       </p>
 
       <h2>
-        Бизнинг тўй кунимиз
+        Биздин үлпөт күнүбүз
       </h2>
-
 
       <div class="calendar-date">
 
         <span>
-          ОКТЯБР
+          ОКТЯБРЬ
         </span>
 
         <strong>
@@ -346,60 +346,36 @@
         </strong>
 
         <span>
-          ПАЙШАНБА · 2026
+          БЕЙШЕМБИ · 2026
         </span>
 
       </div>
 
-
       <p class="countdown-title">
-        Тўйимизга қолди
+        Үлпөтүбүзгө калды
       </p>
 
 
       <div class="countdown">
 
         <div>
-          <strong id="days">
-            00
-          </strong>
-
-          <span>
-            КУН
-          </span>
+          <strong id="days">00</strong>
+          <span>КҮН</span>
         </div>
 
-
         <div>
-          <strong id="hours">
-            00
-          </strong>
-
-          <span>
-            СОАТ
-          </span>
+          <strong id="hours">00</strong>
+          <span>СААТ</span>
         </div>
 
-
         <div>
-          <strong id="minutes">
-            00
-          </strong>
-
-          <span>
-            ДАҚИҚА
-          </span>
+          <strong id="minutes">00</strong>
+          <span>МҮНӨТ</span>
         </div>
 
-
         <div>
-          <strong id="seconds">
-            00
-          </strong>
-
-          <span>
-            СОНИЯ
-          </span>
+          <strong id="seconds">00</strong>
+          <span>СЕКУНДА</span>
         </div>
 
       </div>
@@ -410,7 +386,7 @@
 
 
   <!-- =========================
-       МЕСТО СВАДЬБЫ
+       ҮЛПӨТ ӨТҮҮЧҮ ЖЕР
   ========================== -->
 
   <section class="venue section">
@@ -419,7 +395,7 @@
 
       <img
         src="https://i4.photo.2gis.com/photo-gallery/d5610f89-b79e-4527-822d-ad94fd3a5415.jpg"
-        alt="Тўй маросими"
+        alt="Үйлөнүү үлпөтү"
       >
 
     </div>
@@ -428,12 +404,12 @@
     <div class="venue-content reveal">
 
       <p class="eyebrow">
-        ТЎЙ МАНЗИЛИ
+        ҮЛПӨТ ӨТҮҮЧҮ ДАРЕК
       </p>
 
       <h2>
-        Сизларни
-        <span>кутамиз</span>
+        Сиздерди
+        <span>күтөбүз</span>
       </h2>
 
 
@@ -446,14 +422,13 @@
         <div>
 
           <h3>
-            «Мурас» ресторани
+            «Мурас» рестораны
           </h3>
 
           <p>
-            Жалолобод вилояти,
-            Ала-Бука
+            Жалал-Абад облусу, Ала-Бука
             <br>
-            Мамирбеков кўчаси, 63
+            Мамирбеков көчөсү, 63
           </p>
 
         </div>
@@ -470,13 +445,13 @@
         <div>
 
           <h3>
-            15 октябр 2026
+            15-октябрь, 2026-жыл
           </h3>
 
           <p>
-            Меҳмонларни кутиб олиш — 17:30
+            Конокторду тосуп алуу — 17:30
             <br>
-            Тантана бошланиши — 18:00
+            Үлпөттүн башталышы — 18:00
           </p>
 
         </div>
@@ -490,7 +465,7 @@
         rel="noopener noreferrer"
         class="outline-button dark-button"
       >
-        ХАРИТАДА КЎРИШ
+        КАРТАДАН КӨРҮҮ
         <span>↗</span>
       </a>
 
@@ -506,7 +481,7 @@
   <footer class="footer">
 
     <p class="script">
-      Гули & Рахимжон
+      Рахимжон & Гули
     </p>
 
     <div class="ornament">
@@ -514,14 +489,11 @@
     </div>
 
     <p>
-      15 ОКТЯБР 2026 · С ЛЮБОВЬЮ
+      15 ОКТЯБРЬ 2026 · СҮЙҮҮ МЕНЕН
     </p>
 
-    <a
-      href="#home"
-      class="top-link"
-    >
-      ЮҚОРИГА ↑
+    <a href="#home" class="top-link">
+      ЖОГОРУГА ↑
     </a>
 
   </footer>
