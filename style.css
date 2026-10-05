@@ -1475,3 +1475,12 @@ img {
     margin-top: 20px;
   }
 }
+.signature span,
+.signature strong {
+  display: block;
+}
+
+.signature strong {
+  margin-top: 8px;
+  font-weight: 400;
+}
