@@ -1,42 +1,82 @@
-document.body.classList.add("intro-open");
+// ==========================================
+// БЛОКИ СТРАНИЦЫ
+// ==========================================
+
+const body = document.body;
 
 const intro = document.getElementById("intro");
+
 const envelope = document.getElementById("openInvitation");
+
 const petalsContainer = document.getElementById("petals");
 
-// Открытие свадебного приглашения
-envelope.addEventListener("click", () => {
-  if (envelope.classList.contains("open")) return;
+// Блокируем скролл, пока конверт закрыт
+body.classList.add("intro-open");
 
-  envelope.classList.add("open");
+// ==========================================
+// ОТКРЫТИЕ КОНВЕРТА
+// ==========================================
 
-  setTimeout(() => {
-    intro.classList.add("closed");
-    document.body.classList.remove("intro-open");
-  }, 1200);
-});
+if (envelope && intro) {
+  envelope.addEventListener("click", () => {
+    // Не даём открыть второй раз
+    if (envelope.classList.contains("open")) {
+      return;
+    }
 
-// Создание падающих лепестков
+    envelope.classList.add("open");
+
+    // После анимации убираем заставку
+    setTimeout(() => {
+      intro.classList.add("closed");
+
+      body.classList.remove("intro-open");
+    }, 1200);
+  });
+}
+
+// ==========================================
+// ПРОВЕРКА НА УМЕНЬШЕНИЕ АНИМАЦИЙ
+// ==========================================
+
 const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 
-if (!reduceMotion) {
+// ==========================================
+// ЛЕПЕСТКИ
+// ==========================================
+
+if (!reduceMotion && petalsContainer) {
   for (let i = 0; i < 18; i++) {
     const petal = document.createElement("span");
 
     petal.className = "petal";
+
+    // Случайная позиция
     petal.style.setProperty("--left", `${Math.random() * 100}%`);
+
+    // Случайный размер
     petal.style.setProperty("--size", `${7 + Math.random() * 10}px`);
+
+    // Скорость падения
     petal.style.setProperty("--duration", `${9 + Math.random() * 12}s`);
+
+    // Чтобы лепестки сразу были
+    // на разных этапах падения
     petal.style.setProperty("--delay", `${-Math.random() * 20}s`);
+
+    // Движение влево / вправо
     petal.style.setProperty("--drift", `${-100 + Math.random() * 200}px`);
 
     petalsContainer.appendChild(petal);
   }
 }
 
-// Появление элементов при скролле
+// ==========================================
+// АНИМАЦИЯ ПРИ СКРОЛЛЕ
+// ==========================================
+
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -45,77 +85,131 @@ if ("IntersectionObserver" in window) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+
           currentObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.12 },
+    {
+      threshold: 0.12,
+    },
   );
 
-  revealElements.forEach((element) => observer.observe(element));
+  revealElements.forEach((element) => {
+    observer.observe(element);
+  });
 } else {
-  revealElements.forEach((element) => element.classList.add("visible"));
+  revealElements.forEach((element) => {
+    element.classList.add("visible");
+  });
 }
 
-// Таймер до свадьбы
-// Формат: год, месяц (0 = январь), день, час, минута
-const weddingDate = new Date(2027, 5, 20, 16, 0, 0);
+// ==========================================
+// ДАТА СВАДЬБЫ
+//
+// В JavaScript:
+// январь = 0
+// февраль = 1
+// ...
+// октябрь = 9
+//
+// Поэтому 15 октября 2026:
+// ==========================================
 
-const countdownElements = {
-  days: document.getElementById("days"),
-  hours: document.getElementById("hours"),
-  minutes: document.getElementById("minutes"),
-  seconds: document.getElementById("seconds"),
-};
+const weddingDate = new Date(2026, 9, 15, 16, 0, 0);
+
+// ==========================================
+// ЭЛЕМЕНТЫ ТАЙМЕРА
+// ==========================================
+
+const daysElement = document.getElementById("days");
+
+const hoursElement = document.getElementById("hours");
+
+const minutesElement = document.getElementById("minutes");
+
+const secondsElement = document.getElementById("seconds");
+
+// ==========================================
+// ФОРМАТ ЧИСЕЛ
+// ==========================================
+
+function formatNumber(number) {
+  return String(number).padStart(2, "0");
+}
+
+// ==========================================
+// ОБНОВЛЕНИЕ ТАЙМЕРА
+// ==========================================
 
 function updateCountdown() {
-  const difference = weddingDate.getTime() - Date.now();
+  const now = new Date();
 
+  let difference = weddingDate.getTime() - now.getTime();
+
+  // Если свадьба уже наступила
   if (difference <= 0) {
-    Object.values(countdownElements).forEach((element) => {
-      element.textContent = "00";
-    });
+    if (daysElement) {
+      daysElement.textContent = "00";
+    }
+
+    if (hoursElement) {
+      hoursElement.textContent = "00";
+    }
+
+    if (minutesElement) {
+      minutesElement.textContent = "00";
+    }
+
+    if (secondsElement) {
+      secondsElement.textContent = "00";
+    }
+
     return;
   }
 
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((difference / (1000 * 60)) % 60);
-  const seconds = Math.floor((difference / 1000) % 60);
+  // День = 24 часа
+  const dayMilliseconds = 1000 * 60 * 60 * 24;
 
-  countdownElements.days.textContent = String(days).padStart(3, "0");
-  countdownElements.hours.textContent = String(hours).padStart(2, "0");
-  countdownElements.minutes.textContent = String(minutes).padStart(2, "0");
-  countdownElements.seconds.textContent = String(seconds).padStart(2, "0");
+  const hourMilliseconds = 1000 * 60 * 60;
+
+  const minuteMilliseconds = 1000 * 60;
+
+  const days = Math.floor(difference / dayMilliseconds);
+
+  difference %= dayMilliseconds;
+
+  const hours = Math.floor(difference / hourMilliseconds);
+
+  difference %= hourMilliseconds;
+
+  const minutes = Math.floor(difference / minuteMilliseconds);
+
+  difference %= minuteMilliseconds;
+
+  const seconds = Math.floor(difference / 1000);
+
+  // Выводим значения
+
+  if (daysElement) {
+    daysElement.textContent = formatNumber(days);
+  }
+
+  if (hoursElement) {
+    hoursElement.textContent = formatNumber(hours);
+  }
+
+  if (minutesElement) {
+    minutesElement.textContent = formatNumber(minutes);
+  }
+
+  if (secondsElement) {
+    secondsElement.textContent = formatNumber(seconds);
+  }
 }
 
+// Первый запуск сразу
 updateCountdown();
+
+// Потом каждую секунду
 setInterval(updateCountdown, 1000);
-
-// Подтверждение присутствия через WhatsApp
-const rsvpForm = document.getElementById("rsvpForm");
-const formNote = document.getElementById("formNote");
-
-rsvpForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(rsvpForm);
-  const name = String(formData.get("name")).trim();
-  const attendance = String(formData.get("attendance"));
-
-  if (!name) return;
-
-  // ЗАМЕНИ на номер организатора в международном формате,
-  // только цифры, без +, пробелов и скобок.
-  const phone = "996700123456";
-
-  const message =
-    `Здравствуйте! Я ${name}.\n` +
-    `Ответ на приглашение Амины и Тимура: ${attendance}`;
-
-  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-  formNote.textContent = "Открываем WhatsApp для отправки ответа...";
-
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-});

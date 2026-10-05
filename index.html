@@ -1,168 +1,533 @@
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz-Cyrl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#29191b">
-  <title>Свадьба Амины и Тимура</title>
+
+  <title>Гули & Рахимжон — Тўй таклифномаси</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- Экран открытия приглашения -->
-  <div class="intro" id="intro">
-    <div class="envelope-wrap">
-      <p class="intro-small">С любовью приглашаем вас</p>
+  <!-- Лепестки -->
+  <div id="petals"></div>
 
-      <button class="envelope" id="openInvitation" aria-label="Открыть приглашение">
-        <div class="envelope-letter">
-          <span>Приглашение</span>
-          <strong>A <i>&</i> T</strong>
-        </div>
+
+  <!-- =========================
+       КОНВЕРТ
+  ========================== -->
+
+  <div class="intro" id="intro">
+
+    <div class="intro-content">
+
+      <p class="intro-small">
+        Сизларни меҳр билан таклиф қиламиз
+      </p>
+
+      <button
+        class="envelope"
+        id="openInvitation"
+        aria-label="Таклифномани очиш"
+      >
+
         <div class="envelope-back"></div>
-        <div class="envelope-flap"></div>
+
+        <div class="envelope-letter">
+
+          <span>Таклифнома</span>
+
+          <strong>
+            Г <i>&</i> Р
+          </strong>
+
+        </div>
+
         <div class="envelope-front"></div>
-        <span class="envelope-seal">♥</span>
+
+        <div class="envelope-flap"></div>
+
+        <div class="envelope-seal">
+          ГР
+        </div>
+
       </button>
 
-      <p class="intro-hint">Нажмите, чтобы открыть</p>
+      <p class="intro-hint">
+        ОЧИШ УЧУН БОСИНГ
+      </p>
+
     </div>
+
   </div>
 
-  <!-- Декоративные лепестки -->
-  <div class="petals" id="petals" aria-hidden="true"></div>
 
-  <!-- Главная секция -->
-  <main id="invitation">
-    <header class="hero" id="home">
-      <nav class="navigation">
-        <a href="#home" class="nav-brand">A <span>&</span> T</a>
-        <a href="#details" class="nav-link">Детали торжества</a>
-      </nav>
+  <!-- =========================
+       HERO
+  ========================== -->
 
-      <div class="hero-content reveal">
-        <p class="eyebrow">THE WEDDING INVITATION</p>
-        <p class="script hero-pretitle">Самый важный день</p>
+  <header class="hero" id="home">
 
-        <h1>Амина <span>&</span><br>Тимур</h1>
+    <nav class="navigation">
 
-        <div class="ornament">✦ ─── ❦ ─── ✦</div>
+      <a href="#home" class="nav-brand">
+        Г <span>&</span> Р
+      </a>
 
-        <p class="hero-date">20 · ИЮНЯ · 2027</p>
-        <p class="hero-description">
-          Две души, одна история и целая жизнь впереди.
-          <br>Будем счастливы разделить этот день с вами.
+      <a href="#details" class="nav-link">
+        ТЎЙ ТАФСИЛОТЛАРИ
+      </a>
+
+    </nav>
+
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        ТЎЙ ТАКЛИФНОМАСИ
+      </p>
+
+      <p class="hero-pretitle">
+        Энг муҳим кунимиз
+      </p>
+
+      <h1>
+        Гули
+        <span>&</span>
+        <br>
+        Рахимжон
+      </h1>
+
+      <div class="ornament">
+        ✦ ─── ❦ ─── ✦
+      </div>
+
+      <p class="hero-date">
+        15 · ОКТЯБР · 2026
+      </p>
+
+      <p class="hero-description">
+        Ҳаётимизнинг энг гўзал кунини
+        <br>
+        сиз билан бирга нишонлашни истаймиз
+      </p>
+
+      <a href="#invitation" class="outline-button">
+        ТАКЛИФНОМАНИ КЎРИШ
+        <span>↓</span>
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ОСНОВНОЕ ПРИГЛАШЕНИЕ
+  ========================== -->
+
+  <section
+    class="invitation section"
+    id="invitation"
+  >
+
+    <div class="section-inner reveal">
+
+      <p class="eyebrow">
+        АЗИЗ ЯҚИНЛАРИМИЗ ВА ДЎСТЛАРИМИЗ
+      </p>
+
+      <div class="floral-mark">
+        ❦
+      </div>
+
+      <h2>
+        Сизларни тўйимизга
+        <br>
+        таклиф қиламиз
+      </h2>
+
+      <p class="body-copy">
+        Азиз оила аъзоларимиз, яқинларимиз ва дўстларимиз!
+        Ҳаётимизнинг энг қувончли ва унутилмас кунида
+        сизларни азиз меҳмонимиз сифатида кўришдан
+        мамнун бўламиз.
+      </p>
+
+      <p class="body-copy">
+        Сизнинг ташрифингиз ва эзгу тилакларингиз
+        ушбу кунни биз учун янада унутилмас қилади.
+      </p>
+
+      <p class="signature">
+        С любовью, Гули и Рахимжон
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ҚЫЗ УЗАТУУ
+  ========================== -->
+
+  <section
+    class="kyz-section"
+    id="kyz"
+  >
+
+    <div class="kyz-card reveal">
+
+      <p class="kyz-label">
+        ҚЫЗ УЗАТУУ
+      </p>
+
+      <div class="kyz-ornament">
+        ✦ ─── ❦ ─── ✦
+      </div>
+
+      <h2 class="kyz-name">
+        Гули
+      </h2>
+
+      <p class="kyz-heading">
+        Ҳурматли меҳмонлар!
+      </p>
+
+      <p class="kyz-text">
+        Сизларни қизимиз Гулининг
+        қиз узатиш маросими муносабати билан
+        ёзиладиган дастурхонимизнинг
+        қадрли меҳмони бўлишга таклиф қиламиз.
+      </p>
+
+      <p class="kyz-text kyz-second-text">
+        Ушбу қувончли ва унутилмас кунимизда
+        сизларни орамизда кўришдан мамнун бўламиз.
+      </p>
+
+      <div class="kyz-divider"></div>
+
+
+      <!-- Дата -->
+
+      <div class="kyz-date">
+
+        <div class="kyz-date-side">
+          ОКТЯБР
+        </div>
+
+        <div class="kyz-date-center">
+
+          <span>
+            ПАЙШАНБА
+          </span>
+
+          <strong>
+            15
+          </strong>
+
+        </div>
+
+        <div class="kyz-date-side">
+          2026
+        </div>
+
+      </div>
+
+
+      <!-- Место -->
+
+      <div class="kyz-place">
+
+        <p class="kyz-place-label">
+          МАРОСИМ МАНЗИЛИ
         </p>
 
-        <a href="#story" class="outline-button">НАШЕ ПРИГЛАШЕНИЕ <span>↓</span></a>
-      </div>
+        <h3>
+          «Мурас» ресторани
+        </h3>
 
-      <div class="hero-bottom">СОЗДАНЫ ДРУГ ДЛЯ ДРУГА</div>
-    </header>
-
-    <!-- Приглашение -->
-    <section class="invitation section" id="story">
-      <div class="section-inner reveal">
-        <p class="eyebrow">ДОРОГИЕ РОДНЫЕ И ДРУЗЬЯ</p>
-        <div class="floral-mark">❦</div>
-
-        <h2>Этот день станет<br>особенным благодаря вам</h2>
-
-        <p class="body-copy">
-          С огромной радостью приглашаем вас разделить
-          с нами один из самых прекрасных дней нашей жизни —
-          день, когда две истории станут одной.
+        <p>
+          Жалолобод вилояти, Ала-Бука
+          <br>
+          Мамирбеков кўчаси, 63
         </p>
 
-        <p class="script signature">С любовью, Амина и Тимур</p>
-      </div>
-    </section>
 
-    <!-- Фотографии -->
+        <div class="kyz-time">
 
-    <!-- Дата и таймер -->
-    <section class="date-section section" id="details">
-      <div class="date-content reveal">
-        <p class="eyebrow">СОХРАНИТЕ ЭТУ ДАТУ</p>
-        <h2>Начало нашей<br><span>вечной истории</span></h2>
+          <span>✦</span>
 
-        <div class="calendar-date">
-          <span>ИЮНЬ</span>
-          <strong>20</strong>
-          <span>ВОСКРЕСЕНЬЕ · 2027</span>
+          <strong>
+            17:30
+          </strong>
+
+          <span>✦</span>
+
         </div>
 
-        <p class="countdown-title">До нашей свадьбы осталось</p>
 
-        <div class="countdown">
-          <div><strong id="days">000</strong><span>дней</span></div>
-          <div><strong id="hours">00</strong><span>часов</span></div>
-          <div><strong id="minutes">00</strong><span>минут</span></div>
-          <div><strong id="seconds">00</strong><span>секунд</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Место проведения -->
-    <section class="venue section">
-      <div class="venue-image reveal">
-        <img
-          src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=85"
-          alt="Романтичный свадебный зал"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="venue-content reveal">
-        <p class="eyebrow">БУДЕМ ЖДАТЬ ВАС</p>
-        <h2>Место, где<br>встретимся <span>навсегда</span></h2>
-
-        <div class="venue-detail">
-          <span class="detail-icon">✧</span>
-          <div>
-            <h3>Место проведения</h3>
-            <p>Банкетный зал «Аристократ»</p>
-            <p>г. Бишкек, ул. Примерная, 25</p>
-          </div>
-        </div>
-
-        <div class="venue-detail">
-          <span class="detail-icon">♡</span>
-          <div>
-            <h3>Начало торжества</h3>
-            <p>Сбор гостей — 16:00</p>
-            <p>Начало праздника — 17:00</p>
-          </div>
-        </div>
+        <!--
+          ВАЖНО:
+          здесь потом можешь поставить
+          точную ссылку ресторана из 2ГИС
+        -->
 
         <a
-          class="outline-button dark-button"
-          href="https://2gis.kg/bishkek"
+          href="https://2gis.kg/bishkek/geo/70000001101555735"
           target="_blank"
           rel="noopener noreferrer"
+          class="map-button"
         >
-          ПОСМОТРЕТЬ НА КАРТЕ ↗
+          ХАРИТАДА КЎРИШ
+          <span>↗</span>
         </a>
+
       </div>
-    </section>
 
-    <!-- Дресс-код -->
 
-    <!-- Подтверждение -->
+      <div class="kyz-love">
 
-    <footer class="footer">
-      <p class="script">Амина & Тимур</p>
-      <div class="ornament">✦ ─── ❦ ─── ✦</div>
-      <p>20 ИЮНЯ 2027 · С ЛЮБОВЬЮ</p>
-      <a href="#home" class="top-link">↑ НАВЕРХ</a>
-    </footer>
-  </main>
+        <p>
+          С любовью
+        </p>
+
+        <strong>
+          Гули & Рахимжон
+        </strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ДАТА + ТАЙМЕР
+  ========================== -->
+
+  <section
+    class="date-section section"
+    id="details"
+  >
+
+    <div class="section-inner reveal">
+
+      <p class="eyebrow">
+        БУ САНАНИ ЁДДА САҚЛАНГ
+      </p>
+
+      <h2>
+        Бизнинг тўй кунимиз
+      </h2>
+
+
+      <div class="calendar-date">
+
+        <span>
+          ОКТЯБР
+        </span>
+
+        <strong>
+          15
+        </strong>
+
+        <span>
+          ПАЙШАНБА · 2026
+        </span>
+
+      </div>
+
+
+      <p class="countdown-title">
+        Тўйимизга қолди
+      </p>
+
+
+      <div class="countdown">
+
+        <div>
+          <strong id="days">
+            00
+          </strong>
+
+          <span>
+            КУН
+          </span>
+        </div>
+
+
+        <div>
+          <strong id="hours">
+            00
+          </strong>
+
+          <span>
+            СОАТ
+          </span>
+        </div>
+
+
+        <div>
+          <strong id="minutes">
+            00
+          </strong>
+
+          <span>
+            ДАҚИҚА
+          </span>
+        </div>
+
+
+        <div>
+          <strong id="seconds">
+            00
+          </strong>
+
+          <span>
+            СОНИЯ
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       МЕСТО СВАДЬБЫ
+  ========================== -->
+
+  <section class="venue section">
+
+    <div class="venue-image reveal">
+
+      <img
+        src="https://i4.photo.2gis.com/photo-gallery/d5610f89-b79e-4527-822d-ad94fd3a5415.jpg"
+        alt="Тўй маросими"
+      >
+
+    </div>
+
+
+    <div class="venue-content reveal">
+
+      <p class="eyebrow">
+        ТЎЙ МАНЗИЛИ
+      </p>
+
+      <h2>
+        Сизларни
+        <span>кутамиз</span>
+      </h2>
+
+
+      <div class="venue-detail">
+
+        <span class="detail-icon">
+          ❦
+        </span>
+
+        <div>
+
+          <h3>
+            «Мурас» ресторани
+          </h3>
+
+          <p>
+            Жалолобод вилояти,
+            Ала-Бука
+            <br>
+            Мамирбеков кўчаси, 63
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="venue-detail">
+
+        <span class="detail-icon">
+          ◷
+        </span>
+
+        <div>
+
+          <h3>
+            15 октябр 2026
+          </h3>
+
+          <p>
+            Меҳмонларни кутиб олиш — 17:30
+            <br>
+            Тантана бошланиши — 18:00
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <a
+        href="https://2gis.kg/bishkek/geo/70000001101555735"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="outline-button dark-button"
+      >
+        ХАРИТАДА КЎРИШ
+        <span>↗</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <p class="script">
+      Гули & Рахимжон
+    </p>
+
+    <div class="ornament">
+      ✦ ─── ❦ ─── ✦
+    </div>
+
+    <p>
+      15 ОКТЯБР 2026 · С ЛЮБОВЬЮ
+    </p>
+
+    <a
+      href="#home"
+      class="top-link"
+    >
+      ЮҚОРИГА ↑
+    </a>
+
+  </footer>
+
 
   <script src="script.js"></script>
+
 </body>
 </html>
